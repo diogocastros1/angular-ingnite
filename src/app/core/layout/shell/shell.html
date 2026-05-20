@@ -1,0 +1,26 @@
+<div class="min-h-screen bg-[var(--color-surface)] text-[var(--color-on-surface)]">
+  <header
+    class="sticky top-0 z-10 border-b border-[var(--color-border)] bg-[var(--color-surface)]/95 backdrop-blur"
+  >
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+      <div class="font-semibold">Angular Ignite Starter</div>
+      <nav class="flex items-center gap-2 text-sm">
+        <a mat-stroked-button routerLink="/dashboard" routerLinkActive="is-active">Dashboard</a>
+        <a mat-stroked-button routerLink="/products" routerLinkActive="is-active">Products CRUD</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button mat-stroked-button type="button" (click)="toggleTheme()">Theme</button>
+        <button mat-flat-button color="primary" type="button" (click)="toggleAuthentication()">
+          {{ isAuthenticated() ? 'Logout' : 'Login (demo JWT)' }}
+        </button>
+      </div>
+    </div>
+    @if (isLoading()) {
+      <mat-progress-bar mode="indeterminate" />
+    }
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-6">
+    <router-outlet />
+  </main>
+</div>

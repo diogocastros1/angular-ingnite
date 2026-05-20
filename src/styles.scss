@@ -1,0 +1,31 @@
+@import '@angular/material/prebuilt-themes/azure-blue.css';
+@import 'tailwindcss';
+
+:root {
+  --color-surface: #f8fafc;
+  --color-surface-secondary: #e2e8f0;
+  --color-on-surface: #0f172a;
+  --color-border: #cbd5e1;
+  --color-primary: #2563eb;
+  --color-muted: #475569;
+}
+
+:root[data-theme='dark'] {
+  --color-surface: #0f172a;
+  --color-surface-secondary: #1e293b;
+  --color-on-surface: #f8fafc;
+  --color-border: #334155;
+  --color-primary: #60a5fa;
+  --color-muted: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, 'Segoe UI', sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
