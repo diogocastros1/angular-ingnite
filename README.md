@@ -44,12 +44,12 @@ src/app
 ## Scripts
 
 ```bash
-npm run start
-npm run build
-npm run lint
-npm run test
-npm run e2e
-npm run format:check
+pnpm start
+pnpm build
+pnpm lint
+pnpm test
+pnpm e2e
+pnpm format:check
 ```
 
 ## Git hooks and commit conventions
